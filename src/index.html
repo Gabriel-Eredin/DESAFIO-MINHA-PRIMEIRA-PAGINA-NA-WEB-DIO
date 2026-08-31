@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">      
+        <title>Fundamentos da Web: Client-Server e HTML para Iniciantes</title>
+    </head>
+
+    <body>
+        <h1 style="font-size: 36px;">Fundamentos da Web: Client-Server e HTML para Iniciantes</h1>
+        <hr>
+        <ul>
+            <li><h2 id="indices" style="font-size: 28px;"><i>Índice</i></h2></li>
+            <li>
+                <ul>
+                    <li><a href="#clientServer" style="font-size: 18px;">Entendendo a Comunicação Client-Server</a></li>
+                    <li><a href="#html" style="font-size: 18px;">Introdução ao HTML</a></li>
+                    <li><a href="#tags" style="font-size: 18px;">Tags</a></li>
+                    <li><a href="#atributos" style="font-size: 18px;">Atributos</a></li>
+                    <li><a href="#exemplosTags" style="font-size: 18px;">Exemplos de Tags</a></li>
+                    <li><a href="#exemplosAtributos" style="font-size: 18px;">Exemplos de Atributos</a></li>
+                    <li><a href="#obsTagsAtributos" style="font-size: 18px;">Observações Sobre Tags e Atributos</a></li>                    
+                    <li><a href="#refs" style="font-size: 18px;">Referências e Fontes</a></li>
+                    <li><a href="#agradecimentos" style="font-size: 18px;">Agradecimentos</a></li>
+                </ul>
+            </li>            
+        </ul>
+        <hr>
+        <ul><li><h2 id="clientServer" style="font-size: 28px;"><strong>Entendendo a Comunicação Client-Server</strong></h2></li>
+            <li style="list-style: none;"><a href="#indices" title="Voltar para o índice" style="font-size: 18px;">(índice)</a>
+                <h3 style="font-size: 24px;">O que são cliente e servidor e para que servem?</h3>
+                <p style="font-size: 18px;">A comunicação Client-Server, ou Cliente-Servidor, é um modelo muito utilizado na internet para permitir a troca de informações entre diferentes dispositivos e sistemas. Nesse modelo, o cliente é responsável por fazer uma solicitação, enquanto o servidor recebe essa solicitação, processa o que foi pedido e envia uma resposta. Quando acessamos um site pelo navegador, por exemplo, o navegador funciona como o cliente e solicita ao servidor os arquivos necessários para carregar aquela página.</p>
+                <p style="font-size: 18px;">O cliente normalmente é a parte com a qual o usuário interage diretamente, como um navegador, aplicativo ou programa instalado no computador. Já o servidor é responsável por armazenar, processar ou fornecer informações e serviços para os clientes conectados a ele. Um servidor pode, por exemplo, armazenar os arquivos de um site, consultar um banco de dados, autenticar usuários ou processar informações enviadas por um formulário.</p>
+                <p style="font-size: 18px;">Essa comunicação geralmente acontece através de uma rede utilizando protocolos específicos. Na web, um dos principais protocolos utilizados é o HTTP, ou sua versão segura, HTTPS. Quando digitamos o endereço de um site, o navegador envia uma requisição HTTP para o servidor responsável por aquele endereço. O servidor então analisa a requisição e devolve uma resposta contendo os dados solicitados, que podem incluir arquivos HTML, imagens, estilos CSS, scripts JavaScript ou outras informações.</p>
+                <p style="font-size: 18px;">Esse modelo é importante porque permite separar responsabilidades. O computador do usuário não precisa armazenar todas as informações de um serviço, pois pode solicitar apenas aquilo que precisa ao servidor. Ao mesmo tempo, um mesmo servidor pode atender vários clientes diferentes, permitindo que diversas pessoas utilizem um site ou sistema através da internet.</p>
+            </li>
+        </ul>
+        <hr>
+        <ul><li><h2 id="html" style="font-size: 28px;"><strong>Introdução ao HTML</strong></h2></li>
+            <li style="list-style: none;"><a href="#indices" title="Voltar para o índice" style="font-size: 18px;">(índice)</a>
+                <h3 style="font-size: 24px;">O que é HTML?</h3>
+                <p style="font-size: 18px;">HTML, sigla para HyperText Markup Language, ou Linguagem de Marcação de Hipertexto, é a linguagem utilizada para criar e organizar a estrutura das páginas da web. Apesar de muitas vezes aparecer junto de linguagens de programação, o HTML não é considerado uma linguagem de programação, pois não trabalha diretamente com estruturas como condições, cálculos ou algoritmos. Sua principal função é definir o conteúdo e a estrutura de uma página.</p>
+                <p style="font-size: 18px;">Na prática, o HTML funciona como uma espécie de estrutura base de um site. Através dele podemos informar ao navegador o que é um título, um parágrafo, uma imagem, um link, uma lista, um formulário e diversos outros elementos que fazem parte de uma página.</p>
+                <p style="font-size: 18px;">Um documento HTML é interpretado pelo navegador. Quando o navegador recebe esse arquivo, ele identifica os elementos presentes no código e os transforma na página visualizada pelo usuário. Por exemplo, podemos utilizar uma determinada marcação para indicar que um texto deve ser considerado um título e outra para indicar que determinado conteúdo é um parágrafo.</p>
+                <p style="font-size: 18px;">HTML também costuma trabalhar junto com outras tecnologias. O CSS é utilizado principalmente para controlar a aparência da página, como cores, tamanhos, fontes e posicionamento dos elementos. Já o JavaScript pode adicionar comportamentos e interatividade. Dessa forma, o HTML define principalmente o que existe na página e como seu conteúdo está estruturado.</p>
+            </li>
+        </ul>
+        <hr>
+        <ul><li><h2 id="tags" style="font-size: 28px;"><strong>Tags</strong></h2></li>
+            <li style="list-style: none;"><a href="#indices" title="Voltar para o índice" style="font-size: 18px;">(índice)</a>
+                <h3 style="font-size: 24px;">Tags, as ferramentas do HTML</h3>
+                <p style="font-size: 18px;">As tags são marcações utilizadas pelo HTML para identificar e estruturar os diferentes tipos de conteúdo existentes em uma página. Elas permitem informar ao navegador qual é a função de cada elemento, indicando, por exemplo, se determinado conteúdo representa um título, parágrafo, link, imagem ou item de uma lista.</p>
+                <p style="font-size: 18px;">A maioria das tags possui uma abertura e um fechamento. Um parágrafo, por exemplo, pode ser criado utilizando a tag &lt;p&gt; para iniciar o elemento e &lt;/p&gt; para finalizá-lo. O conteúdo que estiver entre essas duas marcações será interpretado pelo navegador como um parágrafo.</p>
+                <p style="font-size: 18px;">Existem também elementos que não precisam envolver um conteúdo de texto da mesma forma, como a tag &lt;hr&gt;, utilizada para representar uma separação temática entre partes de uma página. A maneira correta de utilizar cada tag depende do elemento que está sendo criado.</p>
+                <p style="font-size: 18px;">Além da aparência apresentada pelo navegador, escolher corretamente as tags também ajuda a organizar semanticamente o documento. Isso facilita a leitura do código, melhora a acessibilidade da página e permite que navegadores e mecanismos de busca compreendam melhor a função de cada parte do conteúdo.</p>
+            </li>
+        </ul>
+        <hr>
+        <ul><li><h2 id="atributos" style="font-size: 28px;"><strong>Atributos</strong></h2></li>
+            <li style="list-style: none;"><a href="#indices" title="Voltar para o índice" style="font-size: 18px;">(índice)</a>
+                <h3 style="font-size: 24px;">Atributos, os detalhes que configuram</h3>
+                <p style="font-size: 18px;">Os atributos são informações adicionais que podem ser colocadas dentro das tags HTML para modificar ou complementar o comportamento de um elemento. Enquanto a tag determina qual é o elemento, o atributo pode fornecer características ou informações específicas sobre ele.</p>
+                <p style="font-size: 18px;">Um exemplo comum acontece com a tag &lt;a&gt;, utilizada para criar links. Apenas informar que determinado elemento é um link não é suficiente, pois também precisamos indicar para onde ele deve levar. Para isso podemos utilizar o atributo href, como em:</p> 
+                <blockquote style="display: block; font-size: 18px;"><strong>&lt;a href="https://exemplo.com"&gt;Site&lt;/a&gt;.</strong></blockquote>
+                <p style="font-size: 18px;">Nesse caso, href informa qual endereço será aberto quando o usuário clicar no link.</p>
+                <p style="font-size: 18px;">Os atributos são normalmente escritos dentro da tag de abertura e possuem um nome e um valor. Dependendo da tag, diferentes atributos podem ser utilizados. Alguns podem definir endereços, identificadores, classes, comportamentos ou outras informações necessárias para o funcionamento do elemento.</p>
+                <p style="font-size: 18px;">Também existem atributos que podem ser utilizados em praticamente qualquer elemento HTML, como id e class. Eles são muito utilizados em conjunto com CSS e JavaScript para identificar elementos específicos da página ou agrupar elementos que possuem características semelhantes.</p>
+            </li>
+        </ul>
+        <hr>
+        <ul><li><h2 id="exemplosTags" style="font-size: 28px;"><strong>Exemplos de Tags</strong></h2></li>
+            <li style="list-style: none;"><a href="#indices" title="Voltar para o índice" style="font-size: 18px;">(índice)</a>
+                <h3 style="font-size: 24px;">Segue uma lista com alguns exemplos de <u>Tags</u> que você vai ouvir falar e provavelmente usar:</h3></li>               
+            <li style="list-style: none;">
+                <ul>
+                    <li style="list-style: none;">
+                        <ul>
+                            <li style="font-size: 18px;">&lt;h1&gt;: Define o título principal de uma página ou de uma seção importante do conteúdo. O HTML também possui títulos de &lt;h2&gt; até &lt;h6&gt;, formando diferentes níveis de hierarquia.</li>
+                            <br>
+                            <li style="font-size: 18px;">&lt;p&gt;: Cria um parágrafo de texto, sendo uma das tags mais utilizadas para organizar conteúdo escrito em uma página.</li>
+                            <br>
+                            <li style="font-size: 18px;">&lt;mark&gt;: Destaca uma parte do texto como se ela tivesse sido marcada com um marca-texto.</li>
+                            <br>
+                            <li style="font-size: 18px;">&lt;small&gt;: Representa informações secundárias ou textos com menor importância, normalmente exibidos em tamanho reduzido.</li>
+                            <br>
+                            <li style="font-size: 18px;">&lt;i&gt;: Indica um trecho de texto diferenciado do restante, normalmente apresentado em itálico pelo navegador.</li>
+                            <br>
+                            <li style="font-size: 18px;">&lt;u&gt;: Representa um trecho de texto com uma anotação diferente do conteúdo normal, sendo geralmente exibido sublinhado.</li>
+                            <br>
+                            <li style="font-size: 18px;">&lt;strong&gt;: Indica que determinado conteúdo possui grande importância ou relevância. Normalmente é exibido em
+                            negrito.</li>
+                            <br>
+                            <li style="font-size: 18px;">&lt;ol&gt;: Cria uma lista ordenada, geralmente apresentada com números ou outra forma de sequência.</li>
+                            <br>
+                            <li style="font-size: 18px;">&lt;ul&gt;: Cria uma lista não ordenada, normalmente apresentada utilizando marcadores.</li>
+                            <br>
+                            <li style="font-size: 18px;">&lt;li&gt;: Representa cada item existente dentro de uma lista criada com &lt;ol&gt; ou &lt;ul&gt;.</li>
+                            <br>
+                            <li style="font-size: 18px;">&lt;a&gt;: Cria um link que pode levar o usuário para outra página, arquivo, endereço da internet ou parte do próprio documento.</li>
+                            <br>
+                            <li style="font-size: 18px;">&lt;hr&gt;: Representa uma mudança ou separação temática entre diferentes partes de um conteúdo, normalmente exibida como uma linha horizontal.</li>
+                            <br>
+                            <li style="font-size: 18px;">&lt;sub&gt;: Exibe um texto em subscrito, ficando abaixo da linha normal do texto. É útil, por exemplo, em fórmulas químicas.</li>
+                            <br>
+                            <li style="font-size: 18px;">&lt;sup&gt;: Exibe um texto em sobrescrito, ficando acima da linha normal do texto. Pode ser utilizado em potências matemáticas.</li>
+                            <br>
+                            <li style="font-size: 18px;">&lt;blockquote&gt;: Representa uma citação mais extensa retirada de outra fonte, normalmente apresentada separada do restante do texto.</li>
+                            <br>
+                            <li style="font-size: 18px;">&lt;font&gt;: Era utilizada para modificar características como fonte, tamanho e cor de um texto. Atualmente é considerada obsoleta e essas alterações devem ser feitas utilizando CSS.</li>
+                            <br>
+                            <li style="font-size: 18px;">&lt;del&gt;: Indica que determinado conteúdo foi removido ou deixou de ser válido, normalmente sendo apresentado com o texto riscado.</li>
+                            <br>
+                            <li style="font-size: 18px;">&lt;abbr&gt;: Representa uma abreviação ou sigla e pode utilizar o atributo title para informar seu significado completo.</li>
+                        </ul>                        
+                    </li>
+                </ul>                
+            </li>
+        </ul>
+        <hr>
+        <ul><li><h2 id="exemplosAtributos" style="font-size: 28px;"><strong>Exemplos de Atributos</strong></h2></li>
+            <li style="list-style: none;"><a href="#indices" title="Voltar para o índice" style="font-size: 18px;">(índice)</a>
+                <h3 style="font-size: 24px;">Agora segue uma lista com alguns exemplos de <u>Atributos</u> que você vai ouvir falar e provavelmente usar:</h3></li>
+            <li style="list-style: none;">
+                <ul>
+                    <li style="list-style: none;">
+                        <ul>
+                            <li style="font-size: 18px;">href: Define o endereço de destino de um link criado com a tag &lt;a&gt;.</li>
+                            <br>
+                            <li style="font-size: 18px;">src: Define o caminho ou endereço de um recurso externo, como uma imagem, vídeo ou arquivo de script.</li>
+                            <br>
+                            <li style="font-size: 18px;">alt: Fornece um texto alternativo para imagens, importante para acessibilidade e para casos em que a imagem não pode ser carregada.</li>
+                            <br>
+                            <li style="font-size: 18px;">id: Define um identificador único para um elemento HTML, permitindo localizá-lo através de CSS, JavaScript ou links internos.</li>
+                            <br>
+                            <li style="font-size: 18px;">class: Define uma ou mais classes para um elemento, permitindo agrupá-lo com outros elementos e aplicar estilos ou comportamentos em conjunto.</li>
+                            <br>
+                            <li style="font-size: 18px;">style: Permite aplicar regras CSS diretamente em um elemento HTML.</li>
+                            <br>
+                            <li style="font-size: 18px;">title: Adiciona uma informação complementar ao elemento, normalmente exibida pelo navegador quando o cursor permanece sobre ele.</li>
+                            <br>
+                            <li style="font-size: 18px;">target: Define onde o conteúdo de um link será aberto, como na mesma página ou em uma nova aba.</li>
+                            <br>
+                            <li style="font-size: 18px;">type: Define o tipo ou comportamento de determinados elementos, como campos de formulário, botões e scripts.</li>
+                            <br>
+                            <li style="font-size: 18px;">value: Define o valor inicial ou atual de determinados elementos, principalmente campos de formulário e botões.</li>
+                            <br>
+                            <li style="font-size: 18px;">placeholder: Exibe um texto temporário dentro de um campo de entrada para indicar ao usuário qual informação deve ser inserida.</li>
+                            <br>
+                            <li style="font-size: 18px;">name: Define um nome para o elemento, sendo muito utilizado para identificar dados enviados através de formulários.</li>
+                            <br>
+                            <li style="font-size: 18px;">required: Indica que um campo deve ser obrigatoriamente preenchido antes que um formulário possa ser enviado.</li>
+                            <br>
+                            <li style="font-size: 18px;">disabled: Desativa um elemento, impedindo que o usuário interaja com ele.</li>
+                            <br>
+                            <li style="font-size: 18px;">width: Define a largura de determinados elementos, como imagens e vídeos.</li>
+                            <br>
+                            <li style="font-size: 18px;">height: Define a altura de determinados elementos, como imagens e vídeos.</li>
+                        </ul>                    
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <hr>
+        <ul><li><h2 id="obsTagsAtributos" style="font-size: 28px;"><strong>Observações Sobre Tags e Atributos</strong></h2></li>
+            <li style="list-style: none;">
+                <a href="#indices" title="Voltar para o índice" style="font-size: 18px;">(índice)</a>
+                <h3 style="font-size: 24px;">Tags, elementos, atributos e a importância de saber diferenciá-los.</h3>
+                <p style="font-size: 18px;">É importante diferenciar tag, elemento e atributo. A tag é a marcação escrita entre os sinais &lt; e &gt;, como &lt;h1&gt;, &lt;p&gt; ou &lt;a&gt;. Já o elemento HTML é a estrutura completa formada pela tag de abertura, seu conteúdo e, quando necessário, a tag de fechamento. Por exemplo, em &lt;p&gt;Texto&lt;/p&gt;, &lt;p&gt; e &lt;/p&gt; são as tags, enquanto todo o conjunto forma o elemento.</p>
+                <p style="font-size: 18px;">Os atributos adicionam informações ou configurações extras aos elementos e normalmente são escritos dentro da tag de abertura. Alguns atributos são globais e podem ser utilizados em praticamente qualquer elemento HTML, como id, class, style e title. Outros possuem funções específicas e só fazem sentido em determinados elementos, como href em links, src em recursos externos e placeholder em campos de formulário.</p>
+                <p style="font-size: 18px;">Por isso, apesar de tags e atributos trabalharem juntos, eles possuem funções diferentes: as tags ajudam a definir a estrutura e o significado do conteúdo, enquanto os atributos complementam ou configuram o comportamento dos elementos.</p>
+            </li>
+        </ul>
+        <hr>
+        <ul><li><h2 id="refs" style="font-size: 28px;"><strong>Referências e Fontes</strong></h2></li>
+            <li style="list-style: none;"><a href="#indices" title="Voltar para o índice" style="font-size: 18px;">(índice)</a>
+                <h3 style="font-size: 24px;">Algumas referências e fontes utilizadas para estudo e como inspiração para esta publicação:</h3></li>
+            <li style="list-style: none;">
+                <ul>
+                    <li style="list-style: none;">
+                        <ul>
+                            <li><a href="https://web.dio.me/track/facf3f2a-4c2d-4250-be5b-93bb4d12995e" target="_blank">DIO - Formação HTML Web Developer</a></li>
+                            <li><a href="https://www.dio.me/technologies/html" target="_blank">DIO - HTML: O primeiro passo para Desenvolvimento Front-end</a></li>           
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN Web Docs - HTML</a></li>
+                            <li><a href="https://www.w3.org/wiki/Html/Training/Tag_syntax" target="_blank">W3C - HTML Tag Syntax</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=0HAHYQQjtOY" target="_blank">YouTube — HTML para iniciantes: tags, elementos e atributos (Laiza do Conecta Elas)</a></li>
+                        </ul>                    
+                    </li>
+                </ul>                
+            </li>
+        </ul>             
+        <hr>
+        <h3 id="agradecimentos" style="font-size: 24px;">Meus mais sinceros agradecimentos a todas as fontes utilizadas, a todos que leram esta publicação e à instituição de ensino DIO, onde estudo, assim como aos seus excelentes profissionais, que contribuem para que eu me torne um profissional cada vez melhor e mais qualificado para realizar meus sonhos na área da computação. Obrigado! Sem vocês, nada disso seria possível! <a href="#indices" title="Voltar para o índice" style="font-size: 18px;">(índice)</a></h3>
+        <h4 style="font-size: 20px;">Feito por: Gabriel Oliveira (Gabriel Eredin)</h4>
+        <a href="https://www.linkedin.com/in/gabriel-oliveira-9380a2429/" title="Acesse minha página no LinkedIn!" target="_blank"><h4 style="font-size: 20px;">LinkedIn</h4></a>
+        <a href="https://github.com/Gabriel-Eredin" title="Acesse minha página no GitHub!" target="_blank"><h4 style="font-size: 20px;">GitHub</h4></a>
+        <img src="images/Vergil Thumbs Up.jpg" alt="Vergil Thumbs Up" style="width: 500px;">       
+    </body>
+</html>
