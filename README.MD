@@ -7,6 +7,9 @@ A publicação aborda conceitos como comunicação Client-Server, introdução a
 
 Além do conteúdo escrito, o site também utiliza diferentes recursos do HTML para organizar a página, criar uma navegação interna entre as seções e apresentar referências utilizadas durante os estudos.
 
+### Link 
+https://gabriel-eredin.github.io/DESAFIO-MINHA-PRIMEIRA-PAGINA-NA-WEB-DIO/
+
 ## O que eu usei:
 
 - Estrutura básica de um documento HTML
